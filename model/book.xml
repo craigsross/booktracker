@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validateThis xsi:noNamespaceSchemaLocation="validateThis.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<conditions>
+	</conditions>
+	<contexts>
+	</contexts>
+	<objectProperties>
+		<property name="bookID" desc="book ID">
+			<rule type="integer" contexts="*" failureMessage="that isn't an integer"/>
+			<rule type="min" contexts="*" failureMessage="must be greater than zero">
+				<param name="min" value="1" />
+			</rule>
+		</property>
+		<property name="bookName" desc="book name">
+			<rule type="required" contexts="*" failureMessage="cannot be empty"/>
+			<rule type="minLength" contexts="*" failureMessage="must be at least one character long">
+				<param name="minLength" value="1" />
+			</rule>
+		</property>
+		<property name="bookSeries" desc="book series">
+			<rule type="integer" contexts="*" failureMessage="must be an integer" />
+			<rule type="min" contexts="*" failureMessage="must be greater than zero">
+				<param name="min" value="1" />
+			</rule>
+		</property>
+		<property name="seriesName" desc="series name">
+			<rule type="required" contexts="*" failureMessage="cannot be empty" />
+			<rule type="minLength" contexts="*" failureMessage="must be at least one character long">
+				<param name="minLength" value="1" />
+			</rule>
+		</property>
+		<property name="bookSequence" desc="book sequence">
+			<rule type="integer" contexts="*" failureMessage="must be an integer"/>
+			<rule type="min" contexts="*" failureMessage="must be greater than zero">
+				<param name="min" value="1" />
+			</rule>
+		</property>
+		<property name="havePaperBook" desc="have paper book">
+			<rule type="inList" contexts="*" failureMessage="must be either yes or no">
+				<param name="list" value="Yes,No" />
+			</rule>
+		</property>
+		<property name="haveEbook" desc="have ebook">
+			<rule type="inList" contexts="*" failureMessage="must be either yes or no">
+				<param name="list" value="Yes,No" />
+			</rule>
+		</property>
+	</objectProperties>
+</validateThis>
