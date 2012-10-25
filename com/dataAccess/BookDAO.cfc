@@ -75,9 +75,9 @@ component output="false" displayname="BookDAO" hint="I am the author DAO class" 
 		result=qRead.execute();
 		bookData=result.getResult();
 		if (bookData.recordcount) {
-				objBook = createObject('component','bookTracker2.com.beans.book').init(bookID=bookData.bookID,bookName=bookData.bookName,seriesName=bookData.seriesName,bookSeries=bookData.bookSeries,bookSequence=bookData.bookSequence,havePaperBook=bookData.havePaperBook,haveEBook=bookData.haveEBook);
+				objBook = createObject('component','com.beans.book').init(bookID=bookData.bookID,bookName=bookData.bookName,seriesName=bookData.seriesName,bookSeries=bookData.bookSeries,bookSequence=bookData.bookSequence,havePaperBook=bookData.havePaperBook,haveEBook=bookData.haveEBook);
 			} else {
-				objBook = createObject('component','bookTracker2.com.beans.book').init();
+				objBook = createObject('component','com.beans.book').init();
 			}
 		return objBook;
 	}

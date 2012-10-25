@@ -19,12 +19,12 @@ component {
     application.SeriesGateway = objSeriesGateway;
     var objBookGateway = createObject('component', 'com.dataAccess.BookGateway').init(datasource=objDatasource);
     application.BookGateway = objBookGateway;
-    ValidateThisConfig = {definitionPath="/bookTracker2/model/",JSRoot="/bookTracker2/scripts/"};
+    ValidateThisConfig = {definitionPath="/model/",JSRoot="/scripts/"};
     application.ValidateThis = createObject("component","ValidateThis.ValidateThis").init(ValidateThisConfig);
   }
 	
 	function onSessionStart() {
 		session.message = "Welcome to BookTracker";
-	}
+  }
 	
 }

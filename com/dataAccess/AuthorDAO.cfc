@@ -30,10 +30,10 @@ component displayName="AuthorDAO" output="false" hint="I am the authorDAO class"
 		result = qSearch.execute();
 		authorData= result.getResult();
 		if (authorData.recordCount) {
-			objAuthor = createObject('component','bookTracker2.com.beans.author').init(authorID=authorData.authorID, authorFirstName=authorData.authorFirstName, authorLastName=authorData.authorLastName);
+			objAuthor = createObject('component','com.beans.author').init(authorID=authorData.authorID, authorFirstName=authorData.authorFirstName, authorLastName=authorData.authorLastName);
 		}
 		else {
-			objAuthor = createObject('component','bookTracker2.com.beans.author').init();
+			objAuthor = createObject('component','com.beans.author').init();
 		}
 		return objAuthor;
 	}

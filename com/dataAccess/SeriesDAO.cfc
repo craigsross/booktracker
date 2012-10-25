@@ -39,12 +39,12 @@ component output="false" displayname="SeriesDAO"  {
 		try {
 			seriesData = qRead.execute().getResult();
 			if (seriesData.recordcount) {
-				objSeries = createObject('component', 'bookTracker2.com.beans.series').init(seriesID=seriesData.seriesID, seriesName=seriesData.seriesName, seriesAuthor=seriesData.seriesAuthor);
+				objSeries = createObject('component', 'com.beans.series').init(seriesID=seriesData.seriesID, seriesName=seriesData.seriesName, seriesAuthor=seriesData.seriesAuthor);
 			} else {
-				objSeries = createObject('component', 'bookTracker2.com.beans.Series').init();
+				objSeries = createObject('component', 'com.beans.Series').init();
 			}
 		} catch (any e) {
-			objSeries = createObject('component', 'bookTracker2.com.beans.Series').init();
+			objSeries = createObject('component', 'com.beans.Series').init();
 		}	
 		return objSeries;
 	}
