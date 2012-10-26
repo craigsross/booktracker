@@ -8,3 +8,12 @@ and also practice using frameworks.
 The plan with this app is to develop apps which work the
 same, off the same database, but using different coding
 practices.
+
+plainoo branch is a version using object-oriented 
+principles but no formal framework beyond what came out
+of my head. The structure is based on Matt (Awesome
+Producer) Gifford's Object-Oriented Programming in
+ColdFusion book, published by PACKT
+
+Uses Bob Silverberg's ValidateThis framework for
+client and server side validation
